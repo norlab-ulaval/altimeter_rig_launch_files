@@ -1,0 +1,8 @@
+topics: [
+    "/dps310_1/pressure",
+    "/dps310_1/temperature",
+    "/dps310_2/pressure",
+    "/dps310_2/temperature",
+    "/setra/pressure",
+    "/rosout"
+]

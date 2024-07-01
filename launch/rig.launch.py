@@ -22,7 +22,15 @@ def generate_launch_description():
         ])
     )
 
+    # Record
+    record_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(launch_folder, 'record.launch.py')
+        ])
+    )
+
     return LaunchDescription([
         dps310_launch,
         setra_launch,
+        record_launch,
     ])
