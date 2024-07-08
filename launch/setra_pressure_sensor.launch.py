@@ -9,11 +9,9 @@ def generate_launch_description():
             executable='ads1x15_node',
             name='setra_node',
             parameters=[
-                {"pub_rate": 100},
+                {"pub_rate": 100,
+                 "frame_id": 'setra'},
                 ],
-            remappings=[
-                ('/pressure', '/setra/pressure')
-            ],
             )
         ])
 

@@ -22,6 +22,13 @@ def generate_launch_description():
         ])
     )
 
+    # mcp9808
+    mcp_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([
+            os.path.join(launch_folder, 'mcp9808.launch.py')
+        ])
+    )
+
     # Record
     record_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
@@ -32,5 +39,6 @@ def generate_launch_description():
     return LaunchDescription([
         dps310_launch,
         setra_launch,
+        mcp_launch,
         record_launch,
     ])
